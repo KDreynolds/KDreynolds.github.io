@@ -68,6 +68,11 @@ body {
     text-align: center;
   }
 
+  nav {
+    width: 100%;
+    background-size: cover;
+  }
+
   footer{
     background: #ffffff;
     grid-area: footer;
