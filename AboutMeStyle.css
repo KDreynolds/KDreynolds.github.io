@@ -19,16 +19,17 @@ body {
   "main main"
   "footer footer";
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 25px;
 }
   h1{
    font-weight: 800;
    color: #FFFFFF;
+   font-size: 40px;
   }
 
   p{
     color: #FFFFFF;
-    font-weight: 400;
+    font-weight: 800;
+    font-size: 25px;
   }
 
   a{
@@ -70,7 +71,7 @@ body {
     grid-area: main;
     width: 100%; 
     text-align: center;
-    padding-top: 5%;
+    padding-top: 3%;
     padding-bottom: 5%;
   }
 
