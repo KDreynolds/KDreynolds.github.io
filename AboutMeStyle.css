@@ -14,25 +14,31 @@ body {
   height:100vh;
   width:100vw;
   grid-template-columns: 1fr .3fr;
-  grid-template-rows: 0.2fr 1fr 0.8fr;
+  grid-template-rows: 1fr 0.8fr;
   grid-template-areas: 
-  "nav nav"
   "main main"
   "footer footer";
-  font-family: 'Fira Sans', sans-serif;
-  font-size: 22px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 25px;
 }
   h1{
    font-weight: 800;
-   font-family: 'Cormorant Garamond', serif;
    color: #FFFFFF;
-   font-size: 40px;
   }
 
   p{
-    font-family: 'Fira Sans', sans-serif;
     color: #FFFFFF;
     font-weight: 400;
+  }
+
+  a{
+    color: #FFFFFF;
+    font-weight: 400;
+    text-decoration: underline;
+  }
+
+  a:hover{
+    text-decoration: none;
   }
 
   #linkedin{
@@ -56,22 +62,18 @@ body {
     padding-top: 10%;
   }
 
-  main, nav {
+  main {
     background-image: url("./banner.jpg");
     background-repeat: no-repeat;
     width: 100%;
     background-size: cover;
-  }
-  main{
     grid-area: main;
     width: 100%; 
     text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
   }
 
-  nav {
-    width: 100%;
-    background-size: cover;
-  }
 
   footer{
     background: #ffffff;
