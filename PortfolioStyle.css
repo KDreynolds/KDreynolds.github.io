@@ -61,6 +61,12 @@ body {
     font-weight: 600;
   }
 
+  h2{
+    color: #ffffff;
+    padding-top: 2%;
+    font-weight: 600;
+  }
+
   main{
     background-image: url("./banner.jpg");
     background-repeat: no-repeat;
