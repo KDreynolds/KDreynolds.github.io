@@ -1,0 +1,324 @@
+body {
+    background-image: url('./assets/background.jpg');
+	background-size: cover;
+}
+
+
+.enter-button-container {
+    position: fixed; /* or absolute */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10; /* Ensure it's above other items */
+}
+
+.enter-button {
+    padding: 10px 20px;
+    background-color: #000; /* Button color */
+    color: #fff; /* Text color */
+    text-decoration: none;
+    font-size: 2em;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+	font-family: 'Roboto Mono', sans-serif;
+    border: 2px solid #fff;
+}
+
+.enter-button:hover {
+    background-color: #333; /* Darker background on hover */
+}
+
+.welcome-text {
+    margin-top: 15%;
+    transform: translate(-50%, -50%);
+    font-size: 2.2em;
+    display: none; /* Hidden by default */
+    opacity: 0;
+    transition: opacity 1s ease;
+    z-index: 9;
+    font-family: 'Roboto Mono', monospace;
+	color: #fff;
+	text-align: center;
+    align-items: center;
+    font-weight: 800;
+}
+
+.social-icons {
+    text-align: center; /* Center the icons container */
+    margin-top: 15%; /* Add some space between the text and icons */
+}
+
+.social-icons a {
+    margin: 0 7%; /* Add horizontal space between icons */
+    color: #fff; /* Set the color of the icons */
+    font-size: 24px; /* Set the size of the icons */
+    text-decoration: none; /* Remove underline from links */
+    display: inline-flex; /* Align icons and text labels */
+	flex-direction: column;
+    align-items: center; /* Center align items vertically */
+    gap: 8px; /* Space between icon and label */
+}
+
+.social-icons a i {
+    transition: transform 0.5s ease; /* Smooth transition for the transform property */
+}
+
+.social-icons a:hover {
+    color: #ccc; /* Change color on hover */
+	transform: scale(1.2);
+}
+
+.icon-label {
+    font-family: 'Roboto Mono', sans-serif; /* Match the font with your style */
+    font-size: 0.8em; /* Adjust label font size as needed */
+    color: #fff; /* Label text color */
+}
+
+.icon-enter-animation {
+    /* Initial state of the icons, hidden */
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* This class will be added via JavaScript to trigger the animation */
+.icon-animation-visible {
+    display: block; /* Make icons visible */
+    opacity: 1; /* Make icons fully visible */
+    animation: animate__animated animate__fadeInUp 1s; /* Animate.css fadeInUp animation */
+}
+
+/* Popup styles */
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 80%;
+    max-width: 80%;
+    font-family: 'Roboto Mono', sans-serif;
+    border: 2px solid #fff;
+    font-size: large;
+}
+
+.close-button {
+    float: right;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.project-list {
+    display: flex; /* Use flexbox to layout children */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center items horizontally */
+    gap: 20px; /* Space between items */
+  }
+  
+.project-link {
+  flex: 0 1 calc(25% - 20px); /* Each item will take up 25% of the container width minus the gap */
+  text-align: center; /* Center the text below the image */
+  margin-bottom: 20px; /* Adds some space below each project */
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-thumbnail {
+  width: 100%; /* Make the image responsive within the container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensures the image covers the area without stretching */
+}
+
+.project-title {
+  font-size: 1em; /* Adjust the size as needed */
+  font-weight: bold; /* Makes the title text bold */
+}
+.project-description {
+  font-size: 0.9em; /* Adjust the size as needed */
+  color: #666; /* A light gray color for the text, adjust as needed */
+  margin-top: 5px; /* Space between the title and the description */
+  text-align: center; /* Center the text below the title */
+}
+
+/* Contact Me Popup specific styles */
+#contactMePopup .popup-content {
+    width: 500px; /* Increased width */
+    max-width: 90%; /* Adjust max-width to ensure it doesn't overflow on smaller screens */
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Roboto Mono', sans-serif;
+    border: 2px solid #fff;
+}
+
+#contactMePopup label {
+    display: block; /* Make labels block elements to take up their own line */
+    margin-top: 10px; /* Add some space above the label */
+    color: #fff; /* White color for the labels */
+}
+
+#contactMePopup input[type="text"],
+#contactMePopup input[type="email"],
+#contactMePopup textarea {
+    width: calc(100% - 20px); /* Full width inputs, minus padding */
+    padding: 10px; /* Padding for inputs */
+    margin-top: 5px; /* Space between label and input */
+    margin-bottom: 15px; /* Space between inputs */
+    border: 1px solid #fff; /* White border for inputs */
+    background: transparent; /* Transparent background */
+    color: #fff; /* White text color */
+}
+
+#contactMePopup textarea {
+    height: 150px; /* Increased height for the textarea */
+    resize: vertical; /* Allow only vertical resizing */
+}
+
+#contactMePopup button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #fff; /* White background for the button */
+    color: #000; /* Black text color */
+    border: none; /* No border */
+    cursor: pointer; /* Cursor pointer */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+    font-family: 'Roboto Mono', sans-serif; /* Match the font with your style */
+    font-size: 1em; /* Adjust button font size as needed */
+    margin-top: 10px; /* Space above the button */
+}
+
+#contactMePopup button[type="submit"]:hover {
+    background-color: #ccc; /* Light gray background on hover */
+}
+
+/* Skills Popup specific styles */
+#skillsPopup .popup-content {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 80%;
+    max-width: 80%;
+    font-family: 'Roboto Mono', sans-serif;
+    border: 2px solid #fff;
+    font-size: large;
+}
+
+.skills-list {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    text-align: left; /* Align text to the left */
+}
+
+.skills-list li {
+    background-color: #333; /* Dark background for each skill */
+    color: #fff; /* White text color */
+    padding: 10px; /* Padding inside each list item */
+    margin-bottom: 5px; /* Space between list items */
+    border-radius: 5px; /* Rounded corners for list items */
+    font-family: 'Roboto Mono', sans-serif; /* Consistent font */
+    font-size: 1em; /* Adjust font size as needed */
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates a 3-column grid */
+    gap: 10px; /* Space between grid items */
+    padding: 20px; /* Padding around the grid */
+}
+
+.skill-item {
+    background-color: #333; /* Dark background for each skill */
+    color: #fff; /* White text color */
+    padding: 10px; /* Padding inside each grid item */
+    border-radius: 5px; /* Rounded corners for grid items */
+    text-align: center; /* Center the text and icon */
+    font-family: 'Roboto Mono', sans-serif; /* Consistent font */
+    font-size: 1em; /* Adjust font size as needed */
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack icon and text vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+.skill-item i {
+    font-size: 2em; /* Larger size for the icons */
+    margin-bottom: 5px; /* Space between icon and text */
+}
+
+.social-icons-small {
+    display: flex; /* Align items in a row */
+    justify-content: center; /* Center the items horizontally */
+    align-items: center; /* Center the items vertically */
+    position: fixed;
+    bottom: 5%; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    display: none;
+    gap: 15px;
+    animation: animate_animated animate__fadeInUp 1s;
+}
+
+.social-icons-small a {
+    margin: 0 7%;
+    color: #fff;
+    font-size: 12px; /* Half the size of the current icons */
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px; /* Adjusted space between icon and label */
+    
+}
+
+.social-icons-small a i {
+    transition: transform 0.5s ease;
+}
+
+.social-icons-small a:hover {
+    color: #ccc;
+    transform: scale(1.2);
+}
+
+/* Responsive styles for screens less than or equal to 768px wide */
+@media (max-width: 768px) {
+    /* Adjust the layout of the larger social icons to a column */
+    .social-icons {
+        flex-direction: column; /* Stack icons vertically */
+        align-items: center; /* Center icons horizontally */
+        gap: 10px; /* Add space between icons */
+    }
+
+    /* Adjust the size and spacing of other elements as needed */
+    .enter-button {
+        font-size: 1.5em; /* Smaller font size for the enter button */
+    }
+
+    .welcome-text {
+        font-size: 1.5em; /* Smaller font size for the welcome text */
+    }
+
+    /* Adjust the smaller social icons */
+    .social-icons-small {
+        bottom: 10%; /* Increase the bottom spacing on smaller screens */
+        gap: 10px; /* Reduce the gap between icons for smaller screens */
+    }
+
+    /* Add any additional responsive adjustments here */
+    /* ... */
+}

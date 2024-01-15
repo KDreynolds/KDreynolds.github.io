@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+	
+    <meta charset="utf-8" />	 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Kyle Reynolds" />
+  
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+	<link href="img/favicon.png" rel="shortcut icon" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<script src="main.js"></script>
+
+	<title>Kyle Reynolds - Full Stack Dev</title>
+
+	</head>
+	    <body>
+			<div class="enter-button-container" id="enterButtonContainer">
+				<a href="#" class="enter-button" id="enterButton">Enter</a>
+			</div>
+			<div class="welcome-text" id="welcomeText" style="display: none;">
+				Kyle Reynolds - Software Engineer
+			</div>
+			<div class="social-icons icon-enter-animation" id="socialIcons" style="display: none;">
+				<a href="#" id="aboutMeLink">
+					<i class="fa-solid fa-user"></i>
+					<span class="icon-label">About Me</span>
+				</a>
+				<a href="#" id="projectsLink">
+					<i class="fa-solid fa-keyboard"></i>
+					<span class="icon-label">Projects</span>
+				</a>
+				<a href="#" id="skillsLink">
+					<i class="fa-solid fa-gears"></i>
+					<span class="icon-label">Skills</span>
+				</a>
+				<a href="#" id="contactMeLink">
+					<i class="fa-solid fa-link"></i>
+					<span class="icon-label">Contact Me</span>
+				</a>
+			</div>
+			<div id="aboutMePopup" class="popup-container" style="display: none;">
+				<div class="popup-content">
+					<span class="close-button">&times;</span>
+					<h1>Kyle Reynolds</h1>
+					<h3>Full Stack Software Engineer</h3>
+					<br>
+					
+					<p>As a self-taught Full Stack Software Engineer, I blend a strong background in Python and software testing with front-end development expertise. My educational journey, starting with a Liberal Studies degree from Montana State University, instilled in me a knack for analytical thinking and innovation. My career path, highlighted by roles at Figure and Bridger Photonics Inc., showcases my proficiency in developing complete software solutions.<br>
+						<br>
+
+						My passion for coding is paralleled only by my love for skateboarding, a sport I grew up with.
+					
+						
+						Skateboarding taught me perseverance and resilience; it's a world where failure is a stepping stone to success. Each fall and every successful trick after numerous attempts have ingrained in me a philosophy that resonates deeply in my software development: falling in love with the process guarantees success.
+						
+						I am deeply committed to open-source projects, as seen in my GitHub portfolio, where I contribute to Python-based web applications. My customer service experience further enriches my ability to
+						
+						understand and fulfill user needs, ensuring the development of user-centric software.<br><br>
+						
+						In my spare time, I manage instant replay for basketball games at Montana State University, a role demanding quick decision-making and problem-solving, mirroring the challenges in software development.
+						
+						My journey from a skateboarder to a Full Stack Software Engineer epitomizes my belief in the power of persistence and embracing the process. Let's connect to drive innovation in the tech world.</p>
+				</div>
+			</div>
+				<!-- Projects Popup container -->
+				<div id="projectsPopup" class="popup-container" style="display: none;">
+					<div class="popup-content">
+						<span class="close-button">&times;</span>
+						<h1>Projects</h1>
+						<div class="project-list">
+							<a href="https://www.hotmixer.space" target="_blank" class="project-link">
+								<img src="https://api.microlink.io/?url=https://www.hotmixer.space&screenshot=true&width=300&height=200&embed=screenshot.url" alt="Project 1 Thumbnail" class="project-thumbnail">
+								<span class="project-title">HoTMiXer.Space</span>
+								<p class="project-description">Versatile command-line tool designed to streamline the process of starting new web projects. Leveraging the power of HTMX along with various backend technologies such as Flask, Gin, and Node.js.</p>
+							</a>
+							<a href="https://www.hencode.dev" target="_blank" class="project-link">
+								<img src="https://api.microlink.io/?url=https://www.hencode.dev&screenshot=true&embed=screenshot.url" alt="Project 1 Thumbnail" class="project-thumbnail">
+								<span class="project-title">Hencode.Dev</span>
+								<p class="project-description">Educational site allowing users to quickly encode and decode data in different formats including Base64, Hexidecimal, URL and binary. Frontend built with VueJS, backend built with FastAPI.</p>
+							</a>
+							<a href="https://github.com/KDreynolds/godotgame" target="_blank" class="project-link">
+								<img src="https://api.microlink.io/?url=https://github.com/kdreynolds/godotgame&screenshot=true&embed=screenshot.url" alt="Project 1 Thumbnail" class="project-thumbnail">
+								<span class="project-title">Grav Runner - Godot video game</span>
+								<p class="project-description">Infinite runner video game created with Godot 3.5 open source video game engine. Grav Runner procedurally creates the level as the user progresses, getting harder every second you manage to stay alive.</p>
+							</a>
+							<a href="https://github.com/KDreynolds/CobolChainLedger" target="_blank" class="project-link">
+								<img src="https://api.microlink.io/?url=https://github.com/kdreynolds/CobolChainLedger&screenshot=true&embed=screenshot.url" alt="Project 1 Thumbnail" class="project-thumbnail">
+								<span class="project-title">CobolChainLedger</span>
+								<p class="project-description">Integrates a COBOL-based financial transaction ledger with a Python-implemented blockchain to provide an immutable record of financial transactions. This ensures that all entries in the ledger can be audited with confidence, as each transaction is recorded in a block within the blockchain, which is then linked to previous transactions, creating a secure chain of records.</p>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div id="contactMePopup" class="popup-container" style="display: none;">
+					<div class="popup-content">
+						<span class="close-button">&times;</span>
+						<h1>Contact Me</h1>
+						<form action="https://formspree.io/f/xyyrzdon" method="POST" id="contactForm">
+							<label for="name">Name:</label>
+							<input type="text" id="name" name="name" required>
+				
+							<label for="email">Email:</label>
+							<input type="email" id="email" name="_replyto" required>
+				
+							<label for="message">Message:</label>
+							<textarea id="message" name="message" required></textarea>
+				
+							<button type="submit">Send</button>
+						</form>
+					</div>
+				</div>
+				<!-- Skills Popup container -->
+				<div id="skillsPopup" class="popup-container" style="display: none;">
+				    <div class="popup-content">
+				        <span class="close-button">&times;</span>
+				        <h1>Skills</h1>
+				        <div class="skills-grid">
+				            <div class="skill-item">
+				                <i class="fa-brands fa-python"></i>
+				                <span>Python</span>
+				            </div>
+				            <div class="skill-item">
+				                <i class="fas fa-flask"></i>
+				                <span>Flask</span>
+				            </div>
+				            <div class="skill-item">
+				                <i class="fas fa-globe-americas"></i>
+				                <span>Django</span>
+				            </div>
+				            <div class="skill-item">
+				                <i class="fas fa-fast-forward"></i>
+				                <span>FastAPI</span>
+				            </div>
+				            <div class="skill-item">
+				                <i class="fa-brands fa-js"></i>
+				                <span>JavaScript</span>
+				            </div>
+							<div class="skill-item">
+				                <i class="fab fa-html5"></i>
+				                <span>HTML</span>
+				            </div>
+							<div class="skill-item">
+				                <i class="fab fa-css3-alt"></i>
+				                <span>CSS</span>
+				            </div>
+				            <div class="skill-item">
+				                <i class="fas fa-shipping-fast"></i>
+				                <span>Express</span>
+				            </div>
+							<div class="skill-item">
+				                <i class="fa-brands fa-node-js"></i>
+				                <span>Node.js</span>
+				            </div>
+				            <div class="skill-item">
+				                <i class="fa-brands fa-docker"></i>
+				                <span>Docker</span>
+				            </div>
+				            <div class="skill-item">
+				                <i class="fab fa-git-square"></i>
+				                <span>Git</span>
+				            </div>
+							<div class="skill-item">
+				                <i class="fab fa-rust"></i>
+				                <span>Rust</span>
+				            </div>
+							<div class="skill-item">
+				                <i class="fab fa-react"></i>
+				                <span>React</span>
+				            </div>
+							<div class="skill-item">
+				                <i class="fab fa-php"></i>
+				                <span>PHP</span>
+				            </div>
+							<div class="skill-item">
+				                <i class="fab fa-linux"></i>
+				                <span>Linux</span>
+				            </div>
+							<div class="skill-item">
+				                <i class="fab fa-figma"></i>
+				                <span>Figma</span>
+				            </div>
+							<div class="skill-item">
+				                <i class="fas fa-code"></i>
+				                <span>Golang</span>
+				            </div>
+							<div class="skill-item">
+				                <i class="fas fa-gamepad"></i>
+				                <span>Godot</span>
+				            </div>
+				        </div>
+				    </div>
+				</div>
+				<div class="social-icons-small" id="socialIconsSmall">
+					<a href="https://twitter.com/imyerf" target="_blank">
+						<i class="fab fa-twitter"></i>
+					</a>
+					<a href="https://github.com/kdreynolds" target="_blank">
+						<i class="fab fa-github"></i>
+					</a>
+					<a href="https://www.linkedin.com/in/kyle-reynolds-08b52094/" target="_blank">
+						<i class="fab fa-linkedin-in"></i>
+					</a>
+				</div>
+		</body>		
+</html>
