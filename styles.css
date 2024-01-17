@@ -51,7 +51,7 @@ body {
 }
 
 .social-icons a {
-    margin: 0 3%; /* Add horizontal space between icons */
+    margin: 0 2%; /* Add horizontal space between icons */
     color: #fff; /* Set the color of the icons */
     font-size: 24px; /* Set the size of the icons */
     text-decoration: none; /* Remove underline from links */
