@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var skillsLink = document.getElementById('skillsLink');
     var skillsPopup = document.getElementById('skillsPopup');
     var socialIconsSmall = document.getElementById('socialIconsSmall');
+    var contactForm = document.getElementById('contactForm');
 
     enterButton.addEventListener('click', function(e) {
         e.preventDefault();
@@ -57,4 +58,36 @@ document.addEventListener('DOMContentLoaded', function() {
             this.closest('.popup-container').style.display = 'none';
         });
     });
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            var name = document.getElementById('name').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var message = document.getElementById('message').value.trim();
+            
+            // Basic validation
+            if (name === '' || email === '' || message === '') {
+                alert('Please fill in all fields');
+                return;
+            }
+            
+            // Email validation
+            if (!isValidEmail(email)) {
+                alert('Please enter a valid email address');
+                return;
+            }
+            
+            // If validation passes, submit the form
+            this.submit();
+        });
+    }
+
+
+    function isValidEmail(email) {
+        // Basic email validation regex
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
 });
